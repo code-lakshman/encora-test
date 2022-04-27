@@ -12,9 +12,10 @@ All config files are in the `config/install` folder
 
 # How this works on Pantheon site 
 
-Live Demo : https://dev-encora-test.pantheonsite.io/user
-Username: admin
-Password: admin
+- Live Demo : https://dev-encora-test.pantheonsite.io/user
+
+- Username: admin
+- Password: admin
 
 # Setup a Drupal system with custom content types based on Organization departments
 ## Sales CT
@@ -56,11 +57,11 @@ https://dev-encora-test.pantheonsite.io/admin/structure/views/view/sales_data/ed
 https://dev-encora-test.pantheonsite.io/delivery-data
 
 ## Create roles and attach to content types such that, no one can edit/delete other departments' data, the view can be public.
-- New roles created
-Sales Team
-Production Team
-Delivery Team
-Sales Head
+New roles created
+- Sales Team
+- Production Team
+- Delivery Team
+- Sales Head
 
 - Permissions page
 https://dev-encora-test.pantheonsite.io/admin/people/permissions 
@@ -75,7 +76,8 @@ https://dev-encora-test.pantheonsite.io/node/3
 - Sales Head 
 https://dev-encora-test.pantheonsite.io/user/2
 - In `.module` file we have `hook_mail` implementation to send an email when sales team creates any sales node
-Screenshot here https://github.com/code-lakshman/encora-test/blob/main/Screenshot%202022-04-27%20at%2022.41.04.png 
-A message appears after you add a sales node
+- Screenshot here 
+https://github.com/code-lakshman/encora-test/blob/main/Screenshot%202022-04-27%20at%2022.41.04.png 
+- A message appears after you add a sales node
 
 
