@@ -1,0 +1,19 @@
+uuid: 7b053453-910b-49d8-a4c3-41e32ef11393
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_standard_field_1
+    - node.type.production
+id: node.production.field_standard_field_1
+field_name: field_standard_field_1
+entity_type: node
+bundle: production
+label: 'Standard Field 1'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

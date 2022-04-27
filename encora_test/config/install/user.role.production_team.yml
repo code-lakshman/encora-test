@@ -1,0 +1,24 @@
+uuid: 6e394d89-6e42-4192-9b34-c7e89b2ef64e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.production
+    - taxonomy.vocabulary.category
+  module:
+    - node
+    - taxonomy
+    - toolbar
+id: production_team
+label: 'Production Team'
+weight: 5
+is_admin: null
+permissions:
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'create production content'
+  - 'create terms in category'
+  - 'delete any production content'
+  - 'delete terms in category'
+  - 'edit any production content'
+  - 'edit terms in category'

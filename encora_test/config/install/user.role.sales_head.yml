@@ -1,0 +1,18 @@
+uuid: f7f991af-e212-4e22-9033-f526402bda66
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sales
+  module:
+    - node
+    - toolbar
+id: sales_head
+label: 'Sales Head'
+weight: 7
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'create sales content'
+  - 'delete any sales content'
+  - 'edit any sales content'

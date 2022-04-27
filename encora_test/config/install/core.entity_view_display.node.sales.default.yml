@@ -1,0 +1,68 @@
+uuid: fccf5578-5825-43dd-8599-463e171cfc85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sales.body
+    - field.field.node.sales.field_quantity
+    - field.field.node.sales.field_quoted_price
+    - field.field.node.sales.field_standard_field_1
+    - field.field.node.sales.field_standard_field_2
+    - node.type.sales
+  module:
+    - text
+    - user
+id: node.sales.default
+targetEntityType: node
+bundle: sales
+mode: default
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_quantity:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_quoted_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_standard_field_1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_standard_field_2:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

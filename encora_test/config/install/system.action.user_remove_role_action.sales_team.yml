@@ -1,0 +1,14 @@
+uuid: 61cf27c0-88e7-4cde-810e-ec61c4cd63b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sales_team
+  module:
+    - user
+id: user_remove_role_action.sales_team
+label: 'Remove the Sales Team role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: sales_team

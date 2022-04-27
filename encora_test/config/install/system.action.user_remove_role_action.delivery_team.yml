@@ -1,0 +1,14 @@
+uuid: 03c98f9a-aa6e-4b50-925d-6b11e9806980
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.delivery_team
+  module:
+    - user
+id: user_remove_role_action.delivery_team
+label: 'Remove the Delivery Team role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: delivery_team

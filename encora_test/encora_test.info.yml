@@ -1,0 +1,8 @@
+name: Encora test
+core_version_requirement: ^9
+type: module
+description: 'Encora Test Module'
+package: Custom
+dependencies:
+  - better_exposed_filters
+  - address

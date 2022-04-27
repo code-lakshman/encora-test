@@ -1,0 +1,14 @@
+uuid: da9c2da9-b386-4b25-88f5-56e5ea0ea532
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.production_team
+  module:
+    - user
+id: user_remove_role_action.production_team
+label: 'Remove the Production Team role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: production_team

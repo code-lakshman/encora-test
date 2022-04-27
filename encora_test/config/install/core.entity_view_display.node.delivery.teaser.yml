@@ -1,0 +1,38 @@
+uuid: 0881355b-a819-4944-b4de-0454d091ac21
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.delivery.body
+    - field.field.node.delivery.field_address
+    - field.field.node.delivery.field_deliver_date
+    - field.field.node.delivery.field_standard_field_1
+    - field.field.node.delivery.field_standard_field_2
+    - node.type.delivery
+  module:
+    - text
+    - user
+id: node.delivery.teaser
+targetEntityType: node
+bundle: delivery
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_deliver_date: true
+  field_standard_field_1: true
+  field_standard_field_2: true

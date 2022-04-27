@@ -1,0 +1,14 @@
+uuid: f400fe6d-5b34-4905-8472-991e44f94841
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.delivery_team
+  module:
+    - user
+id: user_add_role_action.delivery_team
+label: 'Add the Delivery Team role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: delivery_team

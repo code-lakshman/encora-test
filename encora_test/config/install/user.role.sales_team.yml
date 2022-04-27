@@ -1,0 +1,18 @@
+uuid: 56cda8d7-171e-4f0f-b90c-0a2d16b31f1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sales
+  module:
+    - node
+    - toolbar
+id: sales_team
+label: 'Sales Team'
+weight: 4
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'create sales content'
+  - 'delete any sales content'
+  - 'edit any sales content'

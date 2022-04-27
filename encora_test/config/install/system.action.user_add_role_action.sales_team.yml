@@ -1,0 +1,14 @@
+uuid: 8fcac8c8-1939-40f7-a97b-988b68c445f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sales_team
+  module:
+    - user
+id: user_add_role_action.sales_team
+label: 'Add the Sales Team role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: sales_team

@@ -1,0 +1,13 @@
+{
+    "name": "encora/encora_test",
+    "type": "drupal-module",
+    "description": "Encora Test Module",
+    "homepage": "https://encora.com",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "drupal/core": "^9.2 || ^10",
+        "drupal/address": "^1.10",
+        "drupal/better_exposed_filters": "^5.0"
+    }
+}

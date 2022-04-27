@@ -1,0 +1,58 @@
+<?php
+
+
+/**
+ * Implements hook_mail().
+ *
+ */
+function encora_test_mail($key, &$message, $params)
+{
+    $options = array(
+        'langcode' => $message['langcode'],
+    );
+    switch ($key) {
+        case 'sale_created':
+            $message['from'] = \Drupal::config('system.site')->get('mail');
+            $message['subject'] = t('A new sales quote generated:@title', array('@title' => $params['node_title']), $options);
+            $message['body'][] = $params['message'];
+            break;
+    }
+}
+
+/**
+ * implements hook_entity_insert
+ */
+function encora_test_entity_insert(Drupal\Core\Entity\EntityInterface $entity)
+{
+
+    // Ensuring this fires only for Sales CT
+    if ($entity->getEntityTypeId() !== 'node' || $entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'sales') {
+        return;
+    }
+
+    $mailManager = \Drupal::service('plugin.manager.mail');
+
+    $module = 'encora_test';
+    $key = 'sale_created';
+
+    // Get the Sales Head Email as the receipient 
+    $id = \Drupal::entityQuery('user')
+        ->condition('status', 1)
+        ->condition('roles', 'sales_head')
+        ->execute();
+    $user = \Drupal\user\Entity\User::load($id[2]);
+    $to =  $user->get('mail')->getString();
+
+    $params['message'] = $entity->get('body')->value;
+    $params['node_title'] = $entity->label();
+    $langcode = 'en';
+    $send = true;
+
+    $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+
+    if ($result['result'] !== true) {
+        return \Drupal::messenger()->addError('There was a problem sending your message and it was not sent.');
+    } else {
+        return \Drupal::messenger()->addMessage('Mail sent to sales head at ' . $to . '');
+    }
+}

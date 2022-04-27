@@ -1,0 +1,14 @@
+uuid: 6d52da7c-3444-4a2e-8fed-c613d820b361
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.production_team
+  module:
+    - user
+id: user_add_role_action.production_team
+label: 'Add the Production Team role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: production_team

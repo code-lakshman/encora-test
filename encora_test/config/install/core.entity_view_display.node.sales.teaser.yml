@@ -1,0 +1,38 @@
+uuid: 0188d478-7be5-4ae3-bb3d-851ebbb6bb7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sales.body
+    - field.field.node.sales.field_quantity
+    - field.field.node.sales.field_quoted_price
+    - field.field.node.sales.field_standard_field_1
+    - field.field.node.sales.field_standard_field_2
+    - node.type.sales
+  module:
+    - text
+    - user
+id: node.sales.teaser
+targetEntityType: node
+bundle: sales
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_quantity: true
+  field_quoted_price: true
+  field_standard_field_1: true
+  field_standard_field_2: true
