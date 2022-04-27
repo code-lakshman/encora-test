@@ -67,9 +67,9 @@ New roles created
 https://dev-encora-test.pantheonsite.io/admin/people/permissions 
 
 - Public views
-https://dev-encora-test.pantheonsite.io/node/1
-https://dev-encora-test.pantheonsite.io/node/2
-https://dev-encora-test.pantheonsite.io/node/3
+- https://dev-encora-test.pantheonsite.io/node/1
+- https://dev-encora-test.pantheonsite.io/node/2
+- https://dev-encora-test.pantheonsite.io/node/3
 
 
 ## Add-on: create a workflow for sending emails to the sales head when a new quote is generated from sales team.
